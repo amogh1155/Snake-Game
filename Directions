@@ -1,0 +1,56 @@
+package sn;
+
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.LayoutManager;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class Directions implements ActionListener {
+
+	@Override
+
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+
+		JFrame frame = new JFrame("Directions");
+		JPanel panel = new JPanel((LayoutManager) new FlowLayout(FlowLayout.LEFT));
+
+		JLabel player1 = new JLabel("Single Player:");
+		JLabel space0 = new JLabel("                                                                             ");
+		JLabel moveOne = new JLabel("1) Use arrow keys to collect the apples (red dots)");
+		JLabel scoreOne = new JLabel("2) Collect apples to grow bigger and increase your score");
+		JLabel dieOne = new JLabel("3) Do not run into yourself or game ends");
+		JLabel space = new JLabel("                                                         ");
+		
+		JLabel player2 = new JLabel("Two Player:");
+		JLabel space1 = new JLabel("                                                                             ");
+		JLabel moveTwo = new JLabel("1) Use w,a,s,d and the awway keys to move");
+		JLabel score = new JLabel("2) Collect apples to grow bigger and increase your score");
+		JLabel dieTwo = new JLabel("3) If you hit yourself or the opponent the game ends and opponent gets 5 added to score");
+		
+		frame.setVisible(true);
+		frame.setSize(500, 500);
+		
+		frame.add(panel);
+		panel.add(player1);
+		panel.add(space0);
+		panel.add(moveOne);
+		panel.add(scoreOne);
+		panel.add(dieOne);
+		panel.add(space);
+		panel.add(player2);
+		panel.add(space1);
+		panel.add(moveTwo);
+		panel.add(score);
+		panel.add(dieTwo);
+		
+		
+
+	}
+
+}
